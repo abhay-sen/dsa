@@ -9,7 +9,8 @@ int main() {
             break;
         }
         else{
-            cout<<"Prime number\n"; }
+            cout<<"Prime number\n"; 
+            break;}
     }
     
 return 0;

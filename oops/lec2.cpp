@@ -54,6 +54,9 @@ do type ke polymorphism hote h
     2)runtime polymorphism
 sabse pehle compile time ke andar bhi aata h function overloading and operator overloading
 agar mai kisi decimal number ke last mei f likh du mtlb woh floating point number h jaise ki 5.12f
+second concept aata operator overloading jisme mai operator ko overload kar rha hu mtlb operator ko kisi aur form mei exist karwa rha hu
+google karo kaunse kaunse operator ko overload kar sakta hu
+agar mai operator overloading mei likhta hu a+b toh iska mtlb hota h a current object h jisme + operator ke liye b as a input parameter pass ho rha h and current object a mei input parameter pass karke mai result dunga jaise mai kisi function ke liye deta tha agar woh class ke andar hai and usme obj a h agar mai + ko add bolu toh usko mai likh sakta a.add(b);
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -120,7 +123,19 @@ class Maths{
             return a+b*100;
         }
 };
+
 //upar maine sum wale function ko multiple forms mei exists karwa diya jahga pe naam same h but function ke parameters mei pharak h
+//neeche mai operator overload karne ke liye ek aur class create karke dekhunda
+class Param{
+    public:
+    int val;
+    
+    void operator+(Param& obj2){
+        int val1=this->val;
+        int val2=obj2.val;
+        cout<<(val1-val2)<<endl;
+    }
+};
 int main() {
     Dog *a=new Dog;
     a->weight=50;
@@ -137,5 +152,11 @@ int main() {
 
     Maths d;
     cout<<d.sum(5,10)<<" "<<d.sum(15,15,15)<<" "<<d.sum(12,0.22f)<<endl;
+    //operator overloading
+    Param obj1,obj2;
+    obj1.val=7;
+    obj2.val=2;
+    //neeche jo likhunga usme + ko aise overlod karna h ki neeche wali cheez merko difference provide kare
+    obj1+obj2;
 return 0;
 }

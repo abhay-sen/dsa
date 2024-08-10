@@ -1,1 +1,1 @@
-return;
+tail->next=head;

@@ -1,0 +1,10 @@
+/*
+input restricted queue
+push back
+pop front
+pop back
+output restricted queue
+push front
+push rear
+pop front
+*/

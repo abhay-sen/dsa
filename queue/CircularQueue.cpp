@@ -18,7 +18,7 @@ class CircularQueue{
     }
     void push(int data){
         //queue full
-        if((front==0&&rear==size-1)||(rear==front-1&&(front!=-1||front!=0))){
+        if((front==0&&rear==size-1)){
             cout<<"q is full cannot insert "<<endl;
         }
         //single element case -> first element

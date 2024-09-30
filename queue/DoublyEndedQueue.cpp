@@ -24,7 +24,7 @@ class Deque{
     }
     void pushRear(int data){
         // queue full
-        if ((front == 0 && rear == size - 1) || (rear == front - 1 && (front != -1 || front != 0)))
+        if ((front == 0 && rear == size - 1) )
         {
             cout << "q is full cannot insert " << endl;
 
@@ -49,7 +49,7 @@ class Deque{
         }
     }
     void pushFront(int data){
-        if ((front == 0 && rear == size - 1) || (rear == front - 1 && (front != -1 || front != 0)))
+        if ((rear=(front-1)%(size-1)) )
         {
             cout << "q is full cannot insert " << endl;
         }
